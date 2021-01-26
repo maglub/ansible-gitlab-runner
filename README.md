@@ -80,7 +80,7 @@ Example Playbook
 ----------------
 ```yaml
 - hosts: all
-  remote_user: root
+  become: true
   vars_files:
     - vars/main.yml
   roles:
