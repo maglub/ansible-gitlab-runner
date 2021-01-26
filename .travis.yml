@@ -2,6 +2,7 @@
 jobs:
   include:
     - os: linux
+      dist: focal
       python: "3"
       language: python
       addons:
@@ -57,5 +58,5 @@ jobs:
 #        # Running tests
 #        - wsl ansible-playbook test.yml -i inventory --extra-vars 'ansible_user=ansible ansible_password=Ans1ble_User! ansible_connection=winrm ansible_winrm_server_cert_validation=ignore ansible_ssh_port=5986'
 
-notifications:
-  webhooks: https://galaxy.ansible.com/api/v1/notifications/
+#notifications:
+#  webhooks: https://galaxy.ansible.com/api/v1/notifications/

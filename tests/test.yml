@@ -22,7 +22,7 @@
         state: absent
       when: run_mock_server
     - name: Start the mock CI
-      shell: "python ~/mock_gitlab_runner_ci.py ~/mock_ci.pid 6060  >~/mock_ci.log 2>&1"
+      shell: "python3 ~/mock_gitlab_runner_ci.py ~/mock_ci.pid 6060  >~/mock_ci.log 2>&1"
       async: 3600
       poll: 0
       register: mock_server
