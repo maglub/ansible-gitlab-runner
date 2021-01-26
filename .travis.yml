@@ -2,15 +2,15 @@
 jobs:
   include:
     - os: linux
-      python: "2.7"
+      python: "3"
       language: python
       addons:
         apt:
           packages:
-            - python-pip
+            - python3-pip
       install:
         # Install ansible
-        - pip install ansible flask
+        - pip3 install ansible flask
         # Check ansible version
         - ansible --version
         # Create ansible.cfg with correct roles_path
