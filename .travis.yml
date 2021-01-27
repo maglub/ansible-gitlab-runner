@@ -19,9 +19,10 @@ jobs:
         - "{ echo '[defaults]'; echo 'roles_path = ../'; echo 'local_tmp = ~/.ansible/tmp'; echo 'remote_tmp = ~/.ansible/tmp_remote'; echo 'allow_world_readable_tmpfiles=True';  } > ansible.cfg"
       script:
         # Basic role syntax check
+        - ls -la /tmp
         - ansible-playbook tests/test.yml -i tests/inventory --syntax-check
         # Running tests
-        - ansible-playbook tests/test.yml -i tests/inventory -vvv
+        #- ansible-playbook tests/test.yml -i tests/inventory -vvv
       after_failure:
         - touch ~/mock_ci.pid && cat ~/mock_ci.pid
         - touch ~/mock_ci.log && cat ~/mock_ci.log
