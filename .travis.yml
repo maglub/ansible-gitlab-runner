@@ -9,6 +9,7 @@ jobs:
         apt:
           packages:
             - python3-pip
+            - acl
       env:
         - TMPDIR=~/tmp
 
@@ -19,12 +20,12 @@ jobs:
         - ansible --version
         # Create ansible.cfg with correct roles_path
         #- printf '[defaults]\nroles_path=../' > ansible.cfg
-        - 
         - "{ echo '[defaults]'; echo 'roles_path = ../'; echo 'local_tmp = ~/.ansible/tmp'; echo 'remote_tmp = ~/.ansible/tmp_remote';  } > ansible.cfg"
       script:
         # Basic role syntax check
         - id
         - whoami
+        - echo $TMPDIR
         - mkdir -p $TMPDIR
         - ls -la /tmp
         - touch /tmp/arne.txt
