@@ -25,6 +25,13 @@
     index_var: runner_config_index
     loop_var: runner_config
 
+- name: looking at tmp
+  shell: |
+    id
+    whoami
+    ls -ld {{ temp_runner_config_dir.path }}
+    ls -la {{ temp_runner_config_dir.path }}
+
 - name: Assemble new config.toml
   assemble:
     src: "{{ temp_runner_config_dir.path }}"

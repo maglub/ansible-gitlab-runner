@@ -3,7 +3,7 @@ jobs:
   include:
     - os: linux
       dist: focal
-      python: "3.6"
+      python: "3.8"
       language: python
       addons:
         apt:
