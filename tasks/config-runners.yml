@@ -13,7 +13,7 @@
   tempfile:
     state: directory
     suffix: gitlab-runner-config
-    path: "{{ ansible_env.TMPDIR | default('/home/travis/') }}"
+#    path: "{{ ansible_env.TMPDIR | default('/home/travis/') }}"
   register: temp_runner_config_dir
   check_mode: no
   changed_when: false
