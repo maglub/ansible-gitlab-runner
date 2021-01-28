@@ -31,6 +31,10 @@
     whoami
     ls -ld {{ temp_runner_config_dir.path }}
     ls -la {{ temp_runner_config_dir.path }}
+  register: debug_test
+
+- debug:
+    var: debug_test
 
 - name: Assemble new config.toml
   assemble:
