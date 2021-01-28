@@ -20,9 +20,13 @@ jobs:
       script:
         # Basic role syntax check
         - ls -la /tmp
+        - touch /tmp/arne.txt
+        - echo apa > /tmp/arne.txt
+        - ls -la /tmp
+        - cat /tmp/arne.txt
         - ansible-playbook tests/test.yml -i tests/inventory --syntax-check
         # Running tests
-        - ansible-playbook tests/test.yml -i tests/inventory -vvv
+        #- ansible-playbook tests/test.yml -i tests/inventory -vvv
       after_failure:
         - touch ~/mock_ci.pid && cat ~/mock_ci.pid
         - touch ~/mock_ci.log && cat ~/mock_ci.log
