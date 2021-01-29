@@ -38,8 +38,8 @@
 - hosts: localhost
   roles:
     - ansible-gitlab-runner
-  become: true
-  become_user: root
+#  become: true
+#  become_user: root
 
 - hosts: localhost
   tasks:

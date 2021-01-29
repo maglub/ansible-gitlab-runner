@@ -30,4 +30,5 @@
 - name: Force systemd to reread configs
   systemd:
     daemon_reload: yes
+  become: yes
   when: gitlab_runner_exec_reload.changed or gitlab_runner_kill_timeout
