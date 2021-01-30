@@ -22,7 +22,7 @@ jobs:
         # Basic role syntax check
         - ansible-playbook tests/test.yml -i tests/inventory --syntax-check
         # Running tests
-        - ansible-playbook tests/test.yml -i tests/inventory -vvv
+        - ansible-playbook tests/test.yml -i tests/inventory
       after_failure:
         - touch ~/mock_ci.pid && cat ~/mock_ci.pid
         - touch ~/mock_ci.log && cat ~/mock_ci.log
