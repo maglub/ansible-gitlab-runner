@@ -11,7 +11,8 @@ jobs:
             - python3-pip
       install:
         # Install ansible
-        - update-alternatives --install /usr/bin/python python /usr/bin/python3 1
+        - sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1
+        - which pip || true
         - pip3 install ansible flask
         # Check ansible version
         - ansible --version
