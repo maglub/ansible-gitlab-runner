@@ -12,7 +12,7 @@ jobs:
       install:
         # Install ansible
         - sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1
-        - which pip || true
+        - echo $PATH
         - pip3 install ansible flask
         # Check ansible version
         - ansible --version
