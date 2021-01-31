@@ -5,7 +5,6 @@ Add-LocalGroupMember -Group "Administrators" -Member "ansible"
 
 # Install Ubuntu 1804 on WSL
 & choco install -y wsl-ubuntu-1804
-#&choco install wsl-ubuntu-2004
 
 # Install Ansbile
 & C:/Windows/System32/bash.exe -c "export DEBIAN_FRONTEND=noninteractive && apt update && apt install -y python3 python3-pip"
